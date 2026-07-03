@@ -62,9 +62,12 @@ export default function ProductsPage() {
     router.push(`/products?${params.toString()}`);
   };
 
-  const debouncedSearch = useCallback(
-    debounce((value: string) => updateParams('search', value), 500),
-    [searchParams]
+  const debouncedSearch = useMemo(
+  () =>
+    debounce((value: string) => {
+      updateParams('search', value);
+    }, 500),
+  [searchParams]
   );
 
   return (
