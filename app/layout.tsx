@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import { ToastContainer } from '@/components/shared/Toast';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: {

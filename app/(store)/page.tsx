@@ -116,7 +116,7 @@ export default async function HomePage() {
                 About <span className="gradient-text">SogAfrika</span>
               </h2>
               <p className="text-dark-300 leading-relaxed">
-                SogAfrika is a leading provider of electronic security and technology solutions in Africa. 
+                SogAfrika is a leading provider of electronic security and technology solutions in EAst-Africa. 
                 With over {SITE_STATS.experienceYears} years of experience, we specialize in delivering cutting-edge surveillance systems, 
                 fire safety equipment, networking infrastructure, and biometric access control for businesses 
                 and residences.
