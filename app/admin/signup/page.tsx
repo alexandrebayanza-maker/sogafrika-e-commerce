@@ -51,7 +51,7 @@ export default function AdminSignupPage() {
         email,
         password,
         options: {
-          emailRedirectTo: 'http://localhost:3000/admin/login',
+          emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/admin/login`,
           data: {
             full_name: fullName,
           },
