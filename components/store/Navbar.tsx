@@ -15,8 +15,8 @@ import Logo from '@/components/shared/Logo';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
