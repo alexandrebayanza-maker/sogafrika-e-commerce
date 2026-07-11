@@ -17,7 +17,7 @@ export default function CheckoutSuccessPage({ searchParams }: Props) {
         
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Order Confirmed!</h1>
         
-        <p className="text-dark-300">
+        <p className="text-gray-700 dark:text-dark-300">
           Thank you for your purchase. Your order has been received and is being processed.
         </p>
 
@@ -27,7 +27,7 @@ export default function CheckoutSuccessPage({ searchParams }: Props) {
             <span className="font-medium">Order Number</span>
           </div>
           <p className="text-2xl font-bold text-gray-900 dark:text-white font-mono">{orderNumber}</p>
-          <p className="text-dark-400 text-sm">
+          <p className="text-gray-600 dark:text-dark-400 text-sm">
             A confirmation email has been sent to your email address.
           </p>
         </div>

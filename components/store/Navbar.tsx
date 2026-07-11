@@ -129,8 +129,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   pathname === link.href
-                    ? 'text-primary-400 bg-primary-500/10'
-                    : 'text-dark-300 hover:text-primary-400 hover:bg-primary-500/5'
+                    ? 'text-primary-500 bg-primary-500/10'
+                    : 'text-gray-700 dark:text-dark-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-primary-500/5'
                 }`}
               >
                 {link.label}
@@ -142,7 +142,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsCategoryOpen(true)}
               onMouseLeave={() => setIsCategoryOpen(false)}
             >
-              <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all duration-300">
+              <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all duration-300">
                 Categories
                 <ChevronDown className={`w-4 h-4 transition-transform ${isCategoryOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -158,7 +158,7 @@ export default function Navbar() {
                       <Link
                         key={category.slug}
                         href={`/products?category=${category.slug}`}
-                        className="block px-4 py-2.5 text-sm text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all"
+                        className="block px-4 py-2.5 text-sm text-gray-700 dark:text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all"
                       >
                         {category.name}
                       </Link>
@@ -192,7 +192,7 @@ export default function Navbar() {
             
             <Link
               href="/wishlist"
-              className="relative p-2 rounded-lg text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-300"
+              className="relative p-2 rounded-lg text-gray-600 dark:text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-300"
             >
               <Heart className="w-5 h-5" />
               {wishlistCount > 0 && (
@@ -204,7 +204,7 @@ export default function Navbar() {
 
             <Link
               href="/cart"
-              className="relative p-2 rounded-lg text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-300"
+              className="relative p-2 rounded-lg text-gray-600 dark:text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-300"
             >
               <ShoppingCart className="w-5 h-5" />
               {cartCount > 0 && (
@@ -232,13 +232,13 @@ export default function Navbar() {
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full right-0 mt-1 w-48 rounded-xl bg-white dark:bg-dark-900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700/50 shadow-xl py-2"
                     >
-                      <p className="px-4 py-2 text-xs text-dark-500 truncate border-b border-gray-300 dark:border-dark-700800/50">
+                      <p className="px-4 py-2 text-xs text-gray-500 dark:text-dark-500 truncate border-b border-gray-300 dark:border-dark-700800/50">
                         {user.email}
                       </p>
                       {user.role !== 'admin' && (
                         <Link
                           href="/dashboard"
-                          className="flex items-center gap-2 px-4 py-2.5 text-sm text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all"
+                          className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 dark:text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all"
                         >
                           <LayoutDashboard className="w-4 h-4" />
                           My Dashboard
@@ -246,7 +246,7 @@ export default function Navbar() {
                       )}
                       <button
                         onClick={handleLogout}
-                        className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-dark-300 hover:text-red-400 hover:bg-red-500/5 transition-all"
+                        className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-gray-700 dark:text-dark-300 hover:text-red-400 hover:bg-red-500/5 transition-all"
                       >
                         <LogOut className="w-4 h-4" />
                         Logout
@@ -258,7 +258,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/admin/login"
-                className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all duration-300"
+                className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-dark-300 hover:text-primary-400 hover:bg-primary-500/5 transition-all duration-300"
               >
                 <LogIn className="w-4 h-4" />
                 Login / Sign up
@@ -268,7 +268,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-dark-400 hover:text-primary-400 transition-all"
+              className="md:hidden p-2 rounded-lg text-gray-600 dark:text-dark-400 hover:text-primary-400 transition-all"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -293,7 +293,7 @@ export default function Navbar() {
                     className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                       pathname === link.href
                         ? 'text-primary-400 bg-primary-500/10'
-                        : 'text-dark-300 hover:text-primary-400 hover:bg-primary-500/5'
+                        : 'text-gray-700 dark:text-dark-300 hover:text-primary-400 hover:bg-primary-500/5'
                     }`}
                   >
                     {link.label}
@@ -302,13 +302,13 @@ export default function Navbar() {
 
                 {/* Mobile Categories */}
                 <div className="pt-2 border-t border-gray-300 dark:border-dark-700800/50">
-                  <p className="px-4 py-2 text-xs text-dark-500 uppercase tracking-wider">Categories</p>
+                  <p className="px-4 py-2 text-xs text-gray-500 dark:text-dark-500 uppercase tracking-wider">Categories</p>
                   {PRODUCT_CATEGORIES.map(category => (
                     <Link
                       key={category.slug}
                       href={`/products?category=${category.slug}`}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-dark-400 hover:text-primary-400 transition-all"
+                      className="block px-4 py-2.5 text-sm text-gray-600 dark:text-dark-400 hover:text-primary-400 transition-all"
                     >
                       {category.name}
                     </Link>
@@ -335,7 +335,7 @@ export default function Navbar() {
                         <Link
                           href="/dashboard"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="flex items-center gap-2 px-4 py-3 text-sm text-dark-300 hover:text-primary-400 transition-all"
+                          className="flex items-center gap-2 px-4 py-3 text-sm text-gray-700 dark:text-dark-300 hover:text-primary-400 transition-all"
                         >
                           <LayoutDashboard className="w-4 h-4" />
                           My Dashboard

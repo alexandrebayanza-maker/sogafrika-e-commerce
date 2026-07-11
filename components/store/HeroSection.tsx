@@ -55,18 +55,18 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 dark:border-dark-800/50">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 dark:border-dark-700800/50">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.products.value}</p>
-                <p className="text-dark-400 text-sm">{DISPLAY_STATS.products.label}</p>
+                <p className="text-gray-600 dark:text-dark-400 text-sm">{DISPLAY_STATS.products.label}</p>
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.clients.value}</p>
-                <p className="text-dark-400 text-sm">{DISPLAY_STATS.clients.label}</p>
+                <p className="text-gray-600 dark:text-dark-400 text-sm">{DISPLAY_STATS.clients.label}</p>
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.experience.value}</p>
-                <p className="text-dark-400 text-sm">{DISPLAY_STATS.experience.label}</p>
+                <p className="text-gray-600 dark:text-dark-400 text-sm">{DISPLAY_STATS.experience.label}</p>
               </div>
             </div>
           </motion.div>

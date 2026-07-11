@@ -59,7 +59,7 @@ export default function TestimonialCarousel() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
-          <p className="text-dark-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-dark-400 max-w-2xl mx-auto">
             Trusted by businesses and homeowners across East-Africa for premium security solutions
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function TestimonialCarousel() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-900 dark:text-white font-semibold">{testimonials[current].name}</p>
-                  <p className="text-dark-400 text-sm">{testimonials[current].role} &bull; {testimonials[current].location}</p>
+                  <p className="text-gray-600 dark:text-dark-400 text-sm">{testimonials[current].role} &bull; {testimonials[current].location}</p>
                 </div>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (

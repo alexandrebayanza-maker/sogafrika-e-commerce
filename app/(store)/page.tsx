@@ -55,7 +55,7 @@ export default async function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Our <span className="gradient-text">Product Categories</span>
             </h2>
-            <p className="text-dark-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-dark-400 max-w-2xl mx-auto">
               Explore our comprehensive range of electronic security and technology solutions
             </p>
           </div>
@@ -64,7 +64,7 @@ export default async function HomePage() {
               <Link
                 key={category.id}
                 href={`/products?category=${category.slug}`}
-                className="group flex flex-col items-center gap-3 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50 hover:border-primary-500/30 hover:shadow-glow transition-all duration-300"
+                className="group flex flex-col items-center gap-3 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50 hover:border-primary-500/30 hover:shadow-glow transition-all duration-300"
               >
                 <div className="p-3 rounded-xl bg-primary-500/10 text-primary-400 group-hover:bg-primary-500/20 transition-all">
                   {categoryIcons[category.slug] || <Package className="w-8 h-8" />}
@@ -86,7 +86,7 @@ export default async function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                 Featured <span className="gradient-text">Products</span>
               </h2>
-              <p className="text-dark-400">Top-rated security solutions handpicked for you</p>
+              <p className="text-gray-600 dark:text-dark-400">Top-rated security solutions handpicked for you</p>
             </div>
             <Link href="/products" className="hidden md:inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
               View All
@@ -115,44 +115,44 @@ export default async function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 About <span className="gradient-text">SogAfrika</span>
               </h2>
-              <p className="text-dark-300 leading-relaxed">
+              <p className="text-gray-700 dark:text-dark-300 leading-relaxed">
                 SogAfrika is a leading provider of electronic security and technology solutions in East-Africa. 
                 With over {SITE_STATS.experienceYears} years of experience, we specialize in delivering cutting-edge surveillance systems, 
                 fire safety equipment, networking infrastructure, and biometric access control for businesses 
                 and residences.
               </p>
-              <p className="text-dark-300 leading-relaxed">
+              <p className="text-gray-700 dark:text-dark-300 leading-relaxed">
                 Our mission is to make advanced security technology accessible and reliable for everyone. 
                 We partner with world-class manufacturers to bring you the best products at competitive prices, 
                 backed by professional installation and dedicated after-sales support.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                   <Award className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Certified</p>
-                    <p className="text-dark-400 text-sm">Quality Products</p>
+                    <p className="text-gray-600 dark:text-dark-400 text-sm">Quality Products</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                   <Clock className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">24/7</p>
-                    <p className="text-dark-400 text-sm">Support Available</p>
+                    <p className="text-gray-600 dark:text-dark-400 text-sm">Support Available</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                   <Image src="/logo.png" alt="SOGAfrika" width={32} height={32} className="w-8 h-8 rounded-full object-cover" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Warranty</p>
-                    <p className="text-dark-400 text-sm">On All Products</p>
+                    <p className="text-gray-600 dark:text-dark-400 text-sm">On All Products</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                   <Users className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Expert</p>
-                    <p className="text-dark-400 text-sm">Technical Team</p>
+                    <p className="text-gray-600 dark:text-dark-400 text-sm">Technical Team</p>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default async function HomePage() {
                 <div className="text-center p-8">
                   <Logo size="xl" className="mx-auto mb-4" />
                   <p className="text-2xl font-display font-bold text-gray-900 dark:text-white">SogAfrika</p>
-                  <p className="text-dark-400 mt-2">Security & Technology Excellence</p>
+                  <p className="text-gray-600 dark:text-dark-400 mt-2">Security & Technology Excellence</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default async function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Get in <span className="gradient-text">Touch</span>
             </h2>
-            <p className="text-dark-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-dark-400 max-w-2xl mx-auto">
               Have questions about our products or need a custom security solution? We&apos;re here to help.
             </p>
           </div>
@@ -203,33 +203,33 @@ export default async function HomePage() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <MapPin className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
                   <h3 className="text-gray-900 dark:text-white font-semibold mb-1">Our Location</h3>
-                  <p className="text-dark-400">Goma, DRC</p>
-                  <p className="text-dark-400">Goma, North Kivu</p>
+                  <p className="text-gray-600 dark:text-dark-400">Goma, DRC</p>
+                  <p className="text-gray-600 dark:text-dark-400">Goma, North Kivu</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <Phone className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
                   <h3 className="text-gray-900 dark:text-white font-semibold mb-1">Phone</h3>
-                  <p className="text-dark-400">+243 971 821 402</p>
-                  <p className="text-dark-400">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                  <p className="text-gray-600 dark:text-dark-400">+243 971 821 402</p>
+                  <p className="text-gray-600 dark:text-dark-400">Mon - Sat: 8:00 AM - 6:00 PM</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <Mail className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
                   <h3 className="text-gray-900 dark:text-white font-semibold mb-1">Email</h3>
-                  <p className="text-dark-400">contact@sogafrika.com</p>
+                  <p className="text-gray-600 dark:text-dark-400">contact@sogafrika.com</p>
                 
                 </div>
               </div>

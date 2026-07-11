@@ -61,7 +61,7 @@ export default function UserDashboard() {
 
       <div className="relative z-10">
         {/* Header */}
-        <header className="border-b border-gray-300 dark:border-dark-800/50 bg-white dark:bg-dark-950/90 backdrop-blur-xl">
+        <header className="border-b border-gray-300 dark:border-dark-700800/50 bg-white dark:bg-dark-950/90 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Logo size="sm" />
@@ -84,7 +84,7 @@ export default function UserDashboard() {
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
               Welcome, <span className="gradient-text">{profile?.full_name || 'User'}</span>
             </h1>
-            <p className="text-dark-400 mt-2">
+            <p className="text-gray-600 dark:text-dark-400 mt-2">
               Here is your personal dashboard. You are logged in as <span className="text-dark-300 font-medium">{profile?.role}</span>.
             </p>
           </div>
@@ -95,21 +95,21 @@ export default function UserDashboard() {
               <div className="inline-flex p-3 rounded-xl bg-primary-500/10 text-primary-400 border border-primary-500/20 mb-3">
                 <User className="w-6 h-6" />
               </div>
-              <p className="text-dark-400 text-sm">Account</p>
+              <p className="text-gray-600 dark:text-dark-400 text-sm">Account</p>
               <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">{profile?.email}</p>
             </div>
             <div className="glass-card p-6">
               <div className="inline-flex p-3 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3">
                 <ShoppingBag className="w-6 h-6" />
               </div>
-              <p className="text-dark-400 text-sm">My Orders</p>
+              <p className="text-gray-600 dark:text-dark-400 text-sm">My Orders</p>
               <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">View order history</p>
             </div>
             <div className="glass-card p-6">
               <div className="inline-flex p-3 rounded-xl bg-green-500/10 text-green-400 border border-green-500/20 mb-3">
                 <Package className="w-6 h-6" />
               </div>
-              <p className="text-dark-400 text-sm">Wishlist</p>
+              <p className="text-gray-600 dark:text-dark-400 text-sm">Wishlist</p>
               <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">Saved items</p>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function UserDashboard() {
           {profile?.role !== 'admin' && (
             <div className="glass-card p-6 border-yellow-500/20">
               <p className="text-yellow-400 text-sm font-medium mb-1">Notice</p>
-              <p className="text-dark-300 text-sm">
+              <p className="text-gray-700 dark:text-dark-300 text-sm">
                 You are signed in as a regular user. If you need admin access, please contact the SogAfrika team.
               </p>
             </div>

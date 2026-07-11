@@ -78,7 +78,7 @@ export default function ProductsPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
             Our <span className="gradient-text">Products</span>
           </h1>
-          <p className="text-dark-400">
+          <p className="text-gray-600 dark:text-dark-400">
             {total} products available
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function ProductsPage() {
               </div>
             ) : products.length === 0 ? (
               <div className="text-center py-20">
-                <p className="text-dark-400 text-lg mb-4">No products found</p>
+                <p className="text-gray-600 dark:text-dark-400 text-lg mb-4">No products found</p>
                 <button
                   onClick={() => router.push('/products')}
                   className="btn-secondary"

@@ -60,7 +60,7 @@ export default function AdminDashboard() {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             Welcome back, <span className="gradient-text">{userName}</span>
           </h1>
-          <p className="text-dark-400 mt-1">Here&apos;s what&apos;s happening with your store.</p>
+          <p className="text-gray-600 dark:text-dark-400 mt-1">Here&apos;s what&apos;s happening with your store.</p>
         </div>
         <button
           onClick={handleLogout}
@@ -115,7 +115,7 @@ export default function AdminDashboard() {
             </thead>
             <tbody>
               {analytics?.recentOrders?.map(order => (
-                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
+                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-primary-400 font-mono text-sm">{order.order_number}</td>
                   <td className="py-3 px-4 text-dark-200 text-sm">{order.customer_name}</td>
                   <td className="py-3 px-4 text-dark-400 text-sm">{formatDate(order.created_at)}</td>
@@ -151,7 +151,7 @@ function StatCard({ icon, label, value, color }: { icon: React.ReactNode; label:
       <div className={`inline-flex p-3 rounded-xl border ${colors[color]} mb-3`}>
         {icon}
       </div>
-      <p className="text-dark-400 text-sm">{label}</p>
+      <p className="text-gray-600 dark:text-dark-400 text-sm">{label}</p>
       <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{value}</p>
     </div>
   );

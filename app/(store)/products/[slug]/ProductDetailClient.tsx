@@ -175,7 +175,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
 
             {/* Description */}
             {product.description && (
-              <p className="text-dark-300 leading-relaxed">{product.description}</p>
+              <p className="text-gray-700 dark:text-dark-300 leading-relaxed">{product.description}</p>
             )}
 
             {/* Specifications */}
@@ -184,7 +184,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                 <h3 className="text-gray-900 dark:text-white font-semibold mb-3">Specifications</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {Object.entries(product.specifications).map(([key, value]) => (
-                    <div key={key} className="flex justify-between py-2 border-b border-gray-300 dark:border-dark-800/50">
+                    <div key={key} className="flex justify-between py-2 border-b border-gray-300 dark:border-dark-700800/50">
                       <span className="text-dark-400">{key}</span>
                       <span className="text-dark-200 font-medium">{value}</span>
                     </div>
@@ -263,7 +263,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                     </div>
                     <span className="text-dark-400 text-sm">{formatDate(review.created_at)}</span>
                   </div>
-                  {review.comment && <p className="text-dark-300">{review.comment}</p>}
+                  {review.comment && <p className="text-gray-700 dark:text-dark-300">{review.comment}</p>}
                 </div>
               ))}
             </div>

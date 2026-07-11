@@ -22,7 +22,7 @@ export default function CartPage() {
         <div className="text-center space-y-4">
           <ShoppingBag className="w-16 h-16 text-dark-600 mx-auto" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your cart is empty</h2>
-          <p className="text-dark-400">Looks like you haven&apos;t added any products yet.</p>
+          <p className="text-gray-600 dark:text-dark-400">Looks like you haven&apos;t added any products yet.</p>
           <Link href="/products" className="btn-primary inline-flex items-center gap-2">
             Continue Shopping
             <ArrowRight className="w-4 h-4" />

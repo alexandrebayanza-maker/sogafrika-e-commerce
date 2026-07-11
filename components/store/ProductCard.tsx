@@ -65,7 +65,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link href={`/products/${product.slug}`} className="group block">
-        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50 hover:border-primary-500/30 transition-all duration-300 hover:shadow-glow">
+        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50 hover:border-primary-500/30 transition-all duration-300 hover:shadow-glow">
           {/* Image */}
           <div className="relative aspect-square overflow-hidden bg-white dark:bg-dark-900800">
             {product.images[0] ? (
@@ -138,7 +138,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
               {product.name}
             </h3>
             {product.description && (
-              <p className="text-dark-400 text-sm line-clamp-2">
+              <p className="text-gray-600 dark:text-dark-400 text-sm line-clamp-2">
                 {truncateText(product.description, 80)}
               </p>
             )}

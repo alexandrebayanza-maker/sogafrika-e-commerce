@@ -125,7 +125,7 @@ export default function AdminSignupPage() {
             <Logo size="lg" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Create Account</h1>
-          <p className="text-dark-400 mt-1">Join SogAfrika</p>
+          <p className="text-gray-600 dark:text-dark-400 mt-1">Join SogAfrika</p>
         </div>
 
         {/* Form */}

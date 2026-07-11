@@ -49,7 +49,7 @@ export default function WishlistPage() {
         <div className="text-center space-y-4">
           <Heart className="w-16 h-16 text-dark-600 mx-auto" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your wishlist is empty</h2>
-          <p className="text-dark-400">Save products you love for later.</p>
+          <p className="text-gray-600 dark:text-dark-400">Save products you love for later.</p>
           <Link href="/products" className="btn-primary inline-block">
             Browse Products
           </Link>

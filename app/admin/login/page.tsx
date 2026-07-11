@@ -98,7 +98,7 @@ export default function AdminLoginPage() {
             <Logo size="lg" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome Back</h1>
-          <p className="text-dark-400 mt-1">Sign in to SogAfrika</p>
+          <p className="text-gray-600 dark:text-dark-400 mt-1">Sign in to SogAfrika</p>
         </div>
 
         {/* Form */}

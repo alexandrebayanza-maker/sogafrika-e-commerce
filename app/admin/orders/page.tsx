@@ -77,7 +77,7 @@ export default function AdminOrdersPage() {
             </thead>
             <tbody>
               {orders.map(order => (
-                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
+                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-primary-400 font-mono text-sm">{order.order_number}</td>
                   <td className="py-3 px-4">
                     <div>
@@ -133,18 +133,18 @@ export default function AdminOrdersPage() {
               <div>
                 <p className="text-dark-500 text-xs">Customer</p>
                 <p className="text-dark-200">{selectedOrder.customer_name}</p>
-                <p className="text-dark-400 text-sm">{selectedOrder.customer_email}</p>
-                {selectedOrder.customer_phone && <p className="text-dark-400 text-sm">{selectedOrder.customer_phone}</p>}
+                <p className="text-gray-600 dark:text-dark-400 text-sm">{selectedOrder.customer_email}</p>
+                {selectedOrder.customer_phone && <p className="text-gray-600 dark:text-dark-400 text-sm">{selectedOrder.customer_phone}</p>}
               </div>
               <div>
                 <p className="text-dark-500 text-xs">Shipping Address</p>
                 <p className="text-dark-200">{selectedOrder.shipping_address}</p>
-                <p className="text-dark-400 text-sm">{selectedOrder.shipping_city}, {selectedOrder.shipping_country}</p>
+                <p className="text-gray-600 dark:text-dark-400 text-sm">{selectedOrder.shipping_city}, {selectedOrder.shipping_country}</p>
               </div>
               {selectedOrder.notes && (
                 <div>
                   <p className="text-dark-500 text-xs">Notes</p>
-                  <p className="text-dark-300 text-sm">{selectedOrder.notes}</p>
+                  <p className="text-gray-700 dark:text-dark-300 text-sm">{selectedOrder.notes}</p>
                 </div>
               )}
               {selectedOrder.items && (
@@ -152,7 +152,7 @@ export default function AdminOrdersPage() {
                   <p className="text-dark-500 text-xs mb-2">Items</p>
                   <div className="space-y-2">
                     {selectedOrder.items.map(item => (
-                      <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-300 dark:border-dark-800/50">
+                      <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-300 dark:border-dark-700800/50">
                         <div>
                           <p className="text-dark-200 text-sm">{item.product_name}</p>
                           <p className="text-dark-500 text-xs">Qty: {item.quantity}</p>
