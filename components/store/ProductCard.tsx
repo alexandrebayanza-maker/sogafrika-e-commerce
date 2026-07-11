@@ -94,7 +94,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
               <button
                 onClick={handleToggleWishlist}
                 className={`p-3 rounded-full transition-all transform scale-0 group-hover:scale-100 ${
-                  wishlisted ? 'bg-red-500 text-gray-900 dark:text-white' : 'bg-white dark:bg-dark-900700 text-gray-900 dark:text-white hover:bg-white dark:bg-dark-900600'
+                  wishlisted ? 'bg-red-500 text-gray-900 dark:text-white' : 'bg-white dark:bg-dark-900700 text-gray-900 dark:text-white hover:bg-white dark:bg-dark-600'
                 }`}
               >
                 <Heart className={`w-5 h-5 ${wishlisted ? 'fill-current' : ''}`} />

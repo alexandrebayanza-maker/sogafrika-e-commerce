@@ -58,9 +58,14 @@
     @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl;
   }
 
-  .glass-card-light {
-    @apply backdrop-blur-xl bg-white/80 border border-gray-200 rounded-xl shadow-sm;
-  }
+  .glass-card {
+  @apply backdrop-blur-xl
+         bg-white
+         dark:bg-white/5
+         border border-gray-200
+         dark:border-white/10
+         rounded-xl;
+}
 
   .glow-border {
     @apply border border-primary-500/30 shadow-glow;

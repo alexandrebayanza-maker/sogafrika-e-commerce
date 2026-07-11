@@ -75,7 +75,7 @@ export default function TestimonialCarousel() {
               className="glass-card p-8 md:p-10"
             >
               <Quote className="w-10 h-10 text-primary-500/30 mb-4" />
-              <p className="text-lg text-dark-200 leading-relaxed mb-6">
+              <p className="text-lg text-gray-800 dark:text-dark-200 leading-relaxed mb-6">
                 &ldquo;{testimonials[current].content}&rdquo;
               </p>
               <div className="flex items-center justify-between">
@@ -110,7 +110,7 @@ export default function TestimonialCarousel() {
                   key={idx}
                   onClick={() => setCurrent(idx)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    idx === current ? 'w-6 bg-primary-500' : 'bg-white dark:bg-dark-900600'
+                    idx === current ? 'w-6 bg-primary-500' : 'bg-white dark:bg-dark-600'
                   }`}
                 />
               ))}
