@@ -5,7 +5,7 @@ import Logo from '@/components/shared/Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-dark-900950 border-t border-gray-300 dark:border-dark-700800/50">
+    <footer className="bg-white dark:bg-dark-950 border-t border-gray-300 dark:border-dark-800/50">
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-300 dark:border-dark-700800/50">
+      <div className="border-t border-gray-300 dark:border-dark-800/50">
         <div className="section-container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-dark-500 text-sm">
             &copy; {new Date().getFullYear()} SogAfrika. All rights reserved.

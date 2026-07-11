@@ -84,7 +84,7 @@ export default function AdminInventoryPage() {
             {filtered.map(product => {
               const stock = getStockStatus(product.stock_quantity, product.low_stock_threshold);
               return (
-                <tr key={product.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
+                <tr key={product.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-dark-200 text-sm">{product.name}</td>
                   <td className="py-3 px-4 text-gray-900 dark:text-white font-medium text-sm">{product.stock_quantity}</td>
                   <td className="py-3 px-4 text-dark-400 text-sm">{product.low_stock_threshold}</td>

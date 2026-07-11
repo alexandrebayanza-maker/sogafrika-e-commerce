@@ -85,7 +85,7 @@ export default function AdminProductsPage() {
               {filtered.map(product => {
                 const stock = getStockStatus(product.stock_quantity, product.low_stock_threshold);
                 return (
-                  <tr key={product.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
+                  <tr key={product.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg overflow-hidden bg-white dark:bg-dark-900800 flex-shrink-0">

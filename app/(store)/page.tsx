@@ -64,7 +64,7 @@ export default async function HomePage() {
               <Link
                 key={category.id}
                 href={`/products?category=${category.slug}`}
-                className="group flex flex-col items-center gap-3 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50 hover:border-primary-500/30 hover:shadow-glow transition-all duration-300"
+                className="group flex flex-col items-center gap-3 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50 hover:border-primary-500/30 hover:shadow-glow transition-all duration-300"
               >
                 <div className="p-3 rounded-xl bg-primary-500/10 text-primary-400 group-hover:bg-primary-500/20 transition-all">
                   {categoryIcons[category.slug] || <Package className="w-8 h-8" />}
@@ -127,28 +127,28 @@ export default async function HomePage() {
                 backed by professional installation and dedicated after-sales support.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                   <Award className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Certified</p>
                     <p className="text-dark-400 text-sm">Quality Products</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                   <Clock className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">24/7</p>
                     <p className="text-dark-400 text-sm">Support Available</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                   <Image src="/logo.png" alt="SOGAfrika" width={32} height={32} className="w-8 h-8 rounded-full object-cover" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Warranty</p>
                     <p className="text-dark-400 text-sm">On All Products</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                   <Users className="w-8 h-8 text-primary-400" />
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Expert</p>
@@ -203,7 +203,7 @@ export default async function HomePage() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <MapPin className="w-6 h-6 text-primary-400" />
                 </div>
@@ -213,7 +213,7 @@ export default async function HomePage() {
                   <p className="text-dark-400">Goma, North Kivu</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <Phone className="w-6 h-6 text-primary-400" />
                 </div>
@@ -223,7 +223,7 @@ export default async function HomePage() {
                   <p className="text-dark-400">Mon - Sat: 8:00 AM - 6:00 PM</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50">
                 <div className="p-3 rounded-xl bg-primary-500/10">
                   <Mail className="w-6 h-6 text-primary-400" />
                 </div>

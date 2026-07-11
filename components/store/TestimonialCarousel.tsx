@@ -53,7 +53,7 @@ export default function TestimonialCarousel() {
   const next = () => setCurrent(c => (c + 1) % testimonials.length);
 
   return (
-    <section className="page-section bg-white dark:bg-dark-900950/50">
+    <section className="page-section bg-white dark:bg-dark-950/50">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">

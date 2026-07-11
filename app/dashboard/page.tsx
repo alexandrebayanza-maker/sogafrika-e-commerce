@@ -48,20 +48,20 @@ export default function UserDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-900950">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-950">
         <div className="w-8 h-8 border-2 border-primary-500/20 border-t-primary-500 rounded-full animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900950">
+    <div className="min-h-screen bg-white dark:bg-dark-950">
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
 
       <div className="relative z-10">
         {/* Header */}
-        <header className="border-b border-gray-300 dark:border-dark-700800/50 bg-white dark:bg-dark-900950/90 backdrop-blur-xl">
+        <header className="border-b border-gray-300 dark:border-dark-800/50 bg-white dark:bg-dark-950/90 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Logo size="sm" />

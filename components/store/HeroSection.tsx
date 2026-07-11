@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-white dark:bg-dark-900950">
+      <div className="absolute inset-0 bg-white dark:bg-dark-950">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-950/50 to-dark-950" />
         {/* Animated glow orbs */}
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 dark:border-dark-700800/50">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 dark:border-dark-800/50">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.products.value}</p>
                 <p className="text-dark-400 text-sm">{DISPLAY_STATS.products.label}</p>

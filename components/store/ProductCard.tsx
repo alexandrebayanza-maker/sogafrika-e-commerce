@@ -65,7 +65,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link href={`/products/${product.slug}`} className="group block">
-        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-700800/50 hover:border-primary-500/30 transition-all duration-300 hover:shadow-glow">
+        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-dark-900/50 border border-gray-300 dark:border-dark-800/50 hover:border-primary-500/30 transition-all duration-300 hover:shadow-glow">
           {/* Image */}
           <div className="relative aspect-square overflow-hidden bg-white dark:bg-dark-900800">
             {product.images[0] ? (
@@ -83,7 +83,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
             )}
             
             {/* Overlay Actions */}
-            <div className="absolute inset-0 bg-white dark:bg-dark-900950/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
+            <div className="absolute inset-0 bg-white dark:bg-dark-950/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
               <button
                 onClick={handleAddToCart}
                 disabled={product.stock_quantity === 0}

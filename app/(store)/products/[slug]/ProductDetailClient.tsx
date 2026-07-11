@@ -184,7 +184,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                 <h3 className="text-gray-900 dark:text-white font-semibold mb-3">Specifications</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {Object.entries(product.specifications).map(([key, value]) => (
-                    <div key={key} className="flex justify-between py-2 border-b border-gray-300 dark:border-dark-700800/50">
+                    <div key={key} className="flex justify-between py-2 border-b border-gray-300 dark:border-dark-800/50">
                       <span className="text-dark-400">{key}</span>
                       <span className="text-dark-200 font-medium">{value}</span>
                     </div>

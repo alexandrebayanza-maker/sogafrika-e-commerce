@@ -112,7 +112,7 @@ export default function AdminSignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-900950 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-950 p-4">
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="absolute top-1/4 right-1/3 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />

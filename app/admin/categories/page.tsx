@@ -115,7 +115,7 @@ export default function AdminCategoriesPage() {
           </thead>
           <tbody>
             {categories.map(cat => (
-              <tr key={cat.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
+              <tr key={cat.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
                 <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">{cat.name}</td>
                 <td className="py-3 px-4 text-dark-400 font-mono text-sm">{cat.slug}</td>
                 <td className="py-3 px-4 text-dark-400 text-sm">{cat.description || '-'}</td>

@@ -115,7 +115,7 @@ export default function AdminDashboard() {
             </thead>
             <tbody>
               {analytics?.recentOrders?.map(order => (
-                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
+                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-primary-400 font-mono text-sm">{order.order_number}</td>
                   <td className="py-3 px-4 text-dark-200 text-sm">{order.customer_name}</td>
                   <td className="py-3 px-4 text-dark-400 text-sm">{formatDate(order.created_at)}</td>
