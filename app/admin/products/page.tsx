@@ -72,7 +72,7 @@ export default function AdminProductsPage() {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-300 dark:border-dark-700700/50 bg-white dark:bg-dark-900800/30">
+              <tr className="border-b border-gray-300 dark:border-dark-700/50 bg-white dark:bg-dark-900800/30">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Product</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Category</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Price</th>

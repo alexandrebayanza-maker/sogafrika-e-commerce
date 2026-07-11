@@ -202,7 +202,7 @@ export default function EditProductPage() {
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Images</h2>
           <div className="flex flex-wrap gap-3">
             {images.map((url, idx) => (
-              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-gray-300 dark:border-dark-700700">
+              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-gray-300 dark:border-dark-700">
                 <img src={url} alt="" className="w-full h-full object-cover" />
                 <button type="button" onClick={() => setImages(images.filter((_, i) => i !== idx))} className="absolute top-1 right-1 p-1 rounded-full bg-red-500 text-gray-900 dark:text-white">
                   <X className="w-3 h-3" />

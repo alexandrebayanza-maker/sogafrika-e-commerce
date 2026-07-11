@@ -105,7 +105,7 @@ export default function CartPage() {
             <div className="glass-card p-6 sticky top-24 space-y-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">Order Summary</h2>
               
-              <div className="space-y-2 pb-4 border-b border-gray-300 dark:border-dark-700700/50">
+              <div className="space-y-2 pb-4 border-b border-gray-300 dark:border-dark-700/50">
                 <div className="flex justify-between text-dark-300">
                   <span>Subtotal ({items.length} items)</span>
                   <span>{formatPrice(totalPrice(), items[0]?.currency || 'USD')}</span>

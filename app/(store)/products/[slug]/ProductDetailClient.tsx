@@ -77,7 +77,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
             animate={{ opacity: 1, x: 0 }}
             className="space-y-4"
           >
-            <div className="aspect-square rounded-xl overflow-hidden bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700700/50">
+            <div className="aspect-square rounded-xl overflow-hidden bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700/50">
               {product.images[selectedImage] ? (
                 <Image
                   src={product.images[selectedImage]}
@@ -100,7 +100,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                     key={idx}
                     onClick={() => setSelectedImage(idx)}
                     className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImage === idx ? 'border-primary-500' : 'border-gray-300 dark:border-dark-700700 hover:border-gray-300 dark:border-dark-700500'
+                      selectedImage === idx ? 'border-primary-500' : 'border-gray-300 dark:border-dark-700 hover:border-gray-300 dark:border-dark-700500'
                     }`}
                   >
                     <Image src={img} alt="" width={80} height={80} className="w-full h-full object-cover" />
@@ -234,7 +234,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                 className={`p-3 rounded-lg border transition-all ${
                   wishlisted
                     ? 'border-red-500/30 bg-red-500/10 text-red-400'
-                    : 'border-gray-300 dark:border-dark-700700 text-dark-400 hover:border-primary-500/30 hover:text-primary-400'
+                    : 'border-gray-300 dark:border-dark-700 text-dark-400 hover:border-primary-500/30 hover:text-primary-400'
                 }`}
               >
                 <Heart className={`w-5 h-5 ${wishlisted ? 'fill-current' : ''}`} />

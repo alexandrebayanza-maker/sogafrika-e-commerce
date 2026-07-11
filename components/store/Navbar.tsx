@@ -152,7 +152,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-white dark:bg-dark-900900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700700/50 shadow-xl py-2"
+                    className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-white dark:bg-dark-900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700/50 shadow-xl py-2"
                   >
                     {PRODUCT_CATEGORIES.map(category => (
                       <Link
@@ -230,7 +230,7 @@ export default function Navbar() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full right-0 mt-1 w-48 rounded-xl bg-white dark:bg-dark-900900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700700/50 shadow-xl py-2"
+                      className="absolute top-full right-0 mt-1 w-48 rounded-xl bg-white dark:bg-dark-900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700/50 shadow-xl py-2"
                     >
                       <p className="px-4 py-2 text-xs text-dark-500 truncate border-b border-gray-300 dark:border-dark-700800/50">
                         {user.email}

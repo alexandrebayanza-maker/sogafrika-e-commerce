@@ -66,7 +66,7 @@ export default function AdminOrdersPage() {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-300 dark:border-dark-700700/50 bg-white dark:bg-dark-900800/30">
+              <tr className="border-b border-gray-300 dark:border-dark-700/50 bg-white dark:bg-dark-900800/30">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Order</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Customer</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Date</th>
@@ -91,7 +91,7 @@ export default function AdminOrdersPage() {
                     <select
                       value={order.status}
                       onChange={(e) => updateStatus(order.id, e.target.value)}
-                      className="bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700700 rounded px-2 py-1 text-xs text-dark-200"
+                      className="bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700 rounded px-2 py-1 text-xs text-dark-200"
                     >
                       {ORDER_STATUSES.map(s => (
                         <option key={s.value} value={s.value}>{s.label}</option>
@@ -163,7 +163,7 @@ export default function AdminOrdersPage() {
                   </div>
                 </div>
               )}
-              <div className="pt-3 border-t border-gray-300 dark:border-dark-700700/50 flex justify-between">
+              <div className="pt-3 border-t border-gray-300 dark:border-dark-700/50 flex justify-between">
                 <span className="text-gray-900 dark:text-white font-semibold">Total</span>
                 <span className="text-primary-400 font-bold text-lg">{formatPrice(selectedOrder.total, selectedOrder.currency)}</span>
               </div>

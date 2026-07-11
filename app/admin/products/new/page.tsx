@@ -199,7 +199,7 @@ export default function NewProductPage() {
           
           <div className="flex flex-wrap gap-3">
             {images.map((url, idx) => (
-              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-gray-300 dark:border-dark-700700">
+              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-gray-300 dark:border-dark-700">
                 <img src={url} alt="" className="w-full h-full object-cover" />
                 <button
                   type="button"

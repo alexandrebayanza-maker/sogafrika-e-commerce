@@ -102,7 +102,7 @@ export default function WishlistPage() {
                       removeItem(product.id);
                       addToast({ message: 'Removed from wishlist', type: 'info' });
                     }}
-                    className="p-2 rounded-lg border border-gray-300 dark:border-dark-700700 text-dark-400 hover:text-red-400 hover:border-red-500/30 transition-all"
+                    className="p-2 rounded-lg border border-gray-300 dark:border-dark-700 text-dark-400 hover:text-red-400 hover:border-red-500/30 transition-all"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                   ))}
                 </div>
 
-                <div className="border-t border-gray-300 dark:border-dark-700700/50 pt-4 space-y-2">
+                <div className="border-t border-gray-300 dark:border-dark-700/50 pt-4 space-y-2">
                   <div className="flex justify-between text-dark-300">
                     <span>Subtotal</span>
                     <span>{formatPrice(totalPrice(), selectedCurrency)}</span>
@@ -180,7 +180,7 @@ export default function CheckoutPage() {
                     <span>Shipping</span>
                     <span className="text-green-400">Free</span>
                   </div>
-                  <div className="flex justify-between text-lg font-bold text-gray-900 dark:text-white pt-2 border-t border-gray-300 dark:border-dark-700700/50">
+                  <div className="flex justify-between text-lg font-bold text-gray-900 dark:text-white pt-2 border-t border-gray-300 dark:border-dark-700/50">
                     <span>Total</span>
                     <span>{formatPrice(totalPrice(), selectedCurrency)}</span>
                   </div>

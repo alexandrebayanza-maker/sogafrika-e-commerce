@@ -105,7 +105,7 @@ export default function AdminDashboard() {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-300 dark:border-dark-700700/50">
+              <tr className="border-b border-gray-300 dark:border-dark-700/50">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Order</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Customer</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Date</th>
