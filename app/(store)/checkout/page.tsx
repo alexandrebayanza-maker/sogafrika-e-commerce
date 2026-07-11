@@ -83,14 +83,14 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen py-8">
       <div className="section-container">
-        <h1 className="text-3xl font-bold text-white mb-8">Checkout</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Checkout</h1>
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Checkout Form */}
             <div className="lg:col-span-2 space-y-6">
               <div className="glass-card p-6 space-y-4">
-                <h2 className="text-xl font-semibold text-white">Shipping Information</h2>
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Shipping Information</h2>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-dark-300 text-sm mb-1">Phone *</label>
-                    <input {...register('phone')} type="tel" className="input-field" placeholder="+225 07 00 00 00" />
+                    <input {...register('phone')} type="tel" className="input-field" placeholder="+243 990" />
                     {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>}
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export default function CheckoutPage() {
             {/* Order Summary */}
             <div className="lg:col-span-1">
               <div className="glass-card p-6 sticky top-24 space-y-4">
-                <h2 className="text-xl font-bold text-white">Order Summary</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">Order Summary</h2>
                 
                 <div className="space-y-3 max-h-64 overflow-y-auto scrollbar-hide">
                   {items.map(item => (
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                   ))}
                 </div>
 
-                <div className="border-t border-dark-700/50 pt-4 space-y-2">
+                <div className="border-t border-gray-300 dark:border-dark-700700/50 pt-4 space-y-2">
                   <div className="flex justify-between text-dark-300">
                     <span>Subtotal</span>
                     <span>{formatPrice(totalPrice(), selectedCurrency)}</span>
@@ -180,7 +180,7 @@ export default function CheckoutPage() {
                     <span>Shipping</span>
                     <span className="text-green-400">Free</span>
                   </div>
-                  <div className="flex justify-between text-lg font-bold text-white pt-2 border-t border-dark-700/50">
+                  <div className="flex justify-between text-lg font-bold text-gray-900 dark:text-white pt-2 border-t border-gray-300 dark:border-dark-700700/50">
                     <span>Total</span>
                     <span>{formatPrice(totalPrice(), selectedCurrency)}</span>
                   </div>

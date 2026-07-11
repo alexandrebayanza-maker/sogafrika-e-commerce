@@ -85,7 +85,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-dark-950 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-900950 p-4">
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />
@@ -97,7 +97,7 @@ export default function AdminLoginPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-500/10 border border-primary-500/20 mb-4 animate-glow-pulse">
             <Logo size="lg" />
           </div>
-          <h1 className="text-2xl font-bold text-white">Welcome Back</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome Back</h1>
           <p className="text-dark-400 mt-1">Sign in to SogAfrika</p>
         </div>
 

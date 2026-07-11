@@ -48,7 +48,7 @@ export default function WishlistPage() {
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center space-y-4">
           <Heart className="w-16 h-16 text-dark-600 mx-auto" />
-          <h2 className="text-2xl font-bold text-white">Your wishlist is empty</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your wishlist is empty</h2>
           <p className="text-dark-400">Save products you love for later.</p>
           <Link href="/products" className="btn-primary inline-block">
             Browse Products
@@ -61,11 +61,11 @@ export default function WishlistPage() {
   return (
     <div className="min-h-screen py-8">
       <div className="section-container">
-        <h1 className="text-3xl font-bold text-white mb-8">My Wishlist</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">My Wishlist</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map(product => (
             <div key={product.id} className="glass-card overflow-hidden">
-              <div className="aspect-square bg-dark-800 relative">
+              <div className="aspect-square bg-white dark:bg-dark-900800 relative">
                 {product.images[0] ? (
                   <Image src={product.images[0]} alt={product.name} fill className="object-cover" sizes="25vw" />
                 ) : (
@@ -75,7 +75,7 @@ export default function WishlistPage() {
                 )}
               </div>
               <div className="p-4 space-y-3">
-                <h3 className="text-white font-medium truncate">{product.name}</h3>
+                <h3 className="text-gray-900 dark:text-white font-medium truncate">{product.name}</h3>
                 <p className="text-primary-400 font-bold">{formatPrice(product.price, product.currency)}</p>
                 <div className="flex gap-2">
                   <button
@@ -102,7 +102,7 @@ export default function WishlistPage() {
                       removeItem(product.id);
                       addToast({ message: 'Removed from wishlist', type: 'info' });
                     }}
-                    className="p-2 rounded-lg border border-dark-700 text-dark-400 hover:text-red-400 hover:border-red-500/30 transition-all"
+                    className="p-2 rounded-lg border border-gray-300 dark:border-dark-700700 text-dark-400 hover:text-red-400 hover:border-red-500/30 transition-all"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

@@ -5,29 +5,29 @@ import Logo from '@/components/shared/Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-950 border-t border-dark-800/50">
+    <footer className="bg-white dark:bg-dark-900950 border-t border-gray-300 dark:border-dark-700800/50">
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Logo size="sm" />
-              <span className="font-display text-xl font-bold text-white">SogAfrika</span>
+              <span className="font-display text-xl font-bold text-gray-900 dark:text-white">SogAfrika</span>
             </Link>
             <p className="text-dark-400 text-sm leading-relaxed">
               Premium electronic security and technology solutions for homes and businesses across Africa and beyond.
             </p>
             <div className="flex gap-3">
-              <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-dark-800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
+              <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-dark-900800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-dark-800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
+              <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-dark-900800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href={SITE_CONFIG.social.twitter} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-dark-800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
+              <a href={SITE_CONFIG.social.twitter} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-dark-900800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href={SITE_CONFIG.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-dark-800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
+              <a href={SITE_CONFIG.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-dark-900800/50 text-dark-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all">
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2.5">
               <li><Link href="/" className="text-dark-400 hover:text-primary-400 text-sm transition-colors">Home</Link></li>
               <li><Link href="/products" className="text-dark-400 hover:text-primary-400 text-sm transition-colors">All Products</Link></li>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Categories</h3>
+            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Categories</h3>
             <ul className="space-y-2.5">
               {PRODUCT_CATEGORIES.map(category => (
                 <li key={category.slug}>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-dark-800/50">
+      <div className="border-t border-gray-300 dark:border-dark-700800/50">
         <div className="section-container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-dark-500 text-sm">
             &copy; {new Date().getFullYear()} SogAfrika. All rights reserved.

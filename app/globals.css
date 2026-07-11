@@ -79,7 +79,7 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-lg 
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-gray-900 dark:text-white px-6 py-3 rounded-lg 
            font-semibold transition-all duration-300 hover:from-primary-400 hover:to-primary-500 
            hover:shadow-glow active:scale-95;
   }
@@ -96,8 +96,8 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-lg bg-dark-900/50 border border-dark-700 
-           text-white placeholder-dark-400 focus:outline-none focus:border-primary-500/50 
+    @apply w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-900900/50 border border-gray-300 dark:border-dark-700700 
+           text-gray-900 dark:text-white placeholder-dark-400 focus:outline-none focus:border-primary-500/50 
            focus:shadow-glow transition-all duration-300;
   }
 

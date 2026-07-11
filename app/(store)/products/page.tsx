@@ -75,7 +75,7 @@ export default function ProductsPage() {
       <div className="section-container">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
             Our <span className="gradient-text">Products</span>
           </h1>
           <p className="text-dark-400">
@@ -125,7 +125,7 @@ export default function ProductsPage() {
           <aside className={`${showFilters ? 'block' : 'hidden'} md:block w-full md:w-64 flex-shrink-0`}>
             <div className="glass-card p-6 sticky top-24 space-y-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-white font-semibold">Filters</h3>
+                <h3 className="text-gray-900 dark:text-white font-semibold">Filters</h3>
                 {currentCategory && (
                   <button
                     onClick={() => updateParams('category', '')}
@@ -147,7 +147,7 @@ export default function ProductsPage() {
                       className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all ${
                         currentCategory === cat.slug
                           ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
-                          : 'text-dark-400 hover:text-dark-200 hover:bg-dark-800/50'
+                          : 'text-dark-400 hover:text-dark-200 hover:bg-white dark:bg-dark-900800/50'
                       }`}
                     >
                       {cat.name}
@@ -188,7 +188,7 @@ export default function ProductsPage() {
                     <button
                       onClick={() => updateParams('page', String(currentPage - 1))}
                       disabled={currentPage <= 1}
-                      className="px-4 py-2 rounded-lg bg-dark-800 text-dark-300 hover:bg-dark-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                      className="px-4 py-2 rounded-lg bg-white dark:bg-dark-900800 text-dark-300 hover:bg-white dark:bg-dark-900700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
                       Previous
                     </button>
@@ -198,8 +198,8 @@ export default function ProductsPage() {
                         onClick={() => updateParams('page', String(idx + 1))}
                         className={`w-10 h-10 rounded-lg font-medium transition-all ${
                           currentPage === idx + 1
-                            ? 'bg-primary-500 text-white'
-                            : 'bg-dark-800 text-dark-300 hover:bg-dark-700'
+                            ? 'bg-primary-500 text-gray-900 dark:text-white'
+                            : 'bg-white dark:bg-dark-900800 text-dark-300 hover:bg-white dark:bg-dark-900700'
                         }`}
                       >
                         {idx + 1}
@@ -208,7 +208,7 @@ export default function ProductsPage() {
                     <button
                       onClick={() => updateParams('page', String(currentPage + 1))}
                       disabled={currentPage >= totalPages}
-                      className="px-4 py-2 rounded-lg bg-dark-800 text-dark-300 hover:bg-dark-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                      className="px-4 py-2 rounded-lg bg-white dark:bg-dark-900800 text-dark-300 hover:bg-white dark:bg-dark-900700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
                       Next
                     </button>

@@ -77,7 +77,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
             animate={{ opacity: 1, x: 0 }}
             className="space-y-4"
           >
-            <div className="aspect-square rounded-xl overflow-hidden bg-dark-800 border border-dark-700/50">
+            <div className="aspect-square rounded-xl overflow-hidden bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700700/50">
               {product.images[selectedImage] ? (
                 <Image
                   src={product.images[selectedImage]}
@@ -100,7 +100,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                     key={idx}
                     onClick={() => setSelectedImage(idx)}
                     className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImage === idx ? 'border-primary-500' : 'border-dark-700 hover:border-dark-500'
+                      selectedImage === idx ? 'border-primary-500' : 'border-gray-300 dark:border-dark-700700 hover:border-gray-300 dark:border-dark-700500'
                     }`}
                   >
                     <Image src={img} alt="" width={80} height={80} className="w-full h-full object-cover" />
@@ -122,7 +122,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
               </span>
             )}
             
-            <h1 className="text-3xl md:text-4xl font-bold text-white">{product.name}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{product.name}</h1>
             
             {/* Rating */}
             {product.rating_count > 0 && (
@@ -145,7 +145,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
 
             {/* Price */}
             <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-bold text-white">
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 {formatPrice(product.price, product.currency)}
               </span>
               {product.compare_at_price && (
@@ -181,10 +181,10 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
             {/* Specifications */}
             {product.specifications && Object.keys(product.specifications).length > 0 && (
               <div>
-                <h3 className="text-white font-semibold mb-3">Specifications</h3>
+                <h3 className="text-gray-900 dark:text-white font-semibold mb-3">Specifications</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {Object.entries(product.specifications).map(([key, value]) => (
-                    <div key={key} className="flex justify-between py-2 border-b border-dark-800/50">
+                    <div key={key} className="flex justify-between py-2 border-b border-gray-300 dark:border-dark-700800/50">
                       <span className="text-dark-400">{key}</span>
                       <span className="text-dark-200 font-medium">{value}</span>
                     </div>
@@ -196,17 +196,17 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
             {/* Quantity & Actions */}
             <div className="flex items-center gap-4 pt-4">
               {/* Quantity */}
-              <div className="flex items-center gap-2 bg-dark-800 rounded-lg p-1">
+              <div className="flex items-center gap-2 bg-white dark:bg-dark-900800 rounded-lg p-1">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-2 rounded-md hover:bg-dark-700 text-dark-300 transition-colors"
+                  className="p-2 rounded-md hover:bg-white dark:bg-dark-900700 text-dark-300 transition-colors"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
-                <span className="w-10 text-center text-white font-medium">{quantity}</span>
+                <span className="w-10 text-center text-gray-900 dark:text-white font-medium">{quantity}</span>
                 <button
                   onClick={() => setQuantity(Math.min(product.stock_quantity, quantity + 1))}
-                  className="p-2 rounded-md hover:bg-dark-700 text-dark-300 transition-colors"
+                  className="p-2 rounded-md hover:bg-white dark:bg-dark-900700 text-dark-300 transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -234,7 +234,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
                 className={`p-3 rounded-lg border transition-all ${
                   wishlisted
                     ? 'border-red-500/30 bg-red-500/10 text-red-400'
-                    : 'border-dark-700 text-dark-400 hover:border-primary-500/30 hover:text-primary-400'
+                    : 'border-gray-300 dark:border-dark-700700 text-dark-400 hover:border-primary-500/30 hover:text-primary-400'
                 }`}
               >
                 <Heart className={`w-5 h-5 ${wishlisted ? 'fill-current' : ''}`} />
@@ -246,7 +246,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
         {/* Reviews */}
         {reviews.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Customer Reviews</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Customer Reviews</h2>
             <div className="space-y-4">
               {reviews.map(review => (
                 <div key={review.id} className="glass-card p-6">
@@ -273,7 +273,7 @@ export default function ProductDetailClient({ product, relatedProducts, reviews 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Products</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Products</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((p, idx) => (
                 <ProductCard key={p.id} product={p} index={idx} />

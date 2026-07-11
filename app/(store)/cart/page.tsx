@@ -21,7 +21,7 @@ export default function CartPage() {
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center space-y-4">
           <ShoppingBag className="w-16 h-16 text-dark-600 mx-auto" />
-          <h2 className="text-2xl font-bold text-white">Your cart is empty</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your cart is empty</h2>
           <p className="text-dark-400">Looks like you haven&apos;t added any products yet.</p>
           <Link href="/products" className="btn-primary inline-flex items-center gap-2">
             Continue Shopping
@@ -35,7 +35,7 @@ export default function CartPage() {
   return (
     <div className="min-h-screen py-8">
       <div className="section-container">
-        <h1 className="text-3xl font-bold text-white mb-8">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Shopping Cart</h1>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Cart Items */}
@@ -49,7 +49,7 @@ export default function CartPage() {
                 className="glass-card p-4 flex items-center gap-4"
               >
                 {/* Image */}
-                <div className="w-20 h-20 rounded-lg overflow-hidden bg-dark-800 flex-shrink-0">
+                <div className="w-20 h-20 rounded-lg overflow-hidden bg-white dark:bg-dark-900800 flex-shrink-0">
                   {item.image ? (
                     <Image src={item.image} alt={item.name} width={80} height={80} className="w-full h-full object-cover" />
                   ) : (
@@ -61,31 +61,31 @@ export default function CartPage() {
 
                 {/* Details */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-white font-medium truncate">{item.name}</h3>
+                  <h3 className="text-gray-900 dark:text-white font-medium truncate">{item.name}</h3>
                   <p className="text-primary-400 font-semibold">
                     {formatPrice(item.price, item.currency)}
                   </p>
                 </div>
 
                 {/* Quantity */}
-                <div className="flex items-center gap-2 bg-dark-800 rounded-lg p-1">
+                <div className="flex items-center gap-2 bg-white dark:bg-dark-900800 rounded-lg p-1">
                   <button
                     onClick={() => updateQuantity(item.productId, item.quantity - 1)}
-                    className="p-1.5 rounded hover:bg-dark-700 text-dark-300 transition-colors"
+                    className="p-1.5 rounded hover:bg-white dark:bg-dark-900700 text-dark-300 transition-colors"
                   >
                     <Minus className="w-3 h-3" />
                   </button>
-                  <span className="w-8 text-center text-white text-sm font-medium">{item.quantity}</span>
+                  <span className="w-8 text-center text-gray-900 dark:text-white text-sm font-medium">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.productId, item.quantity + 1)}
-                    className="p-1.5 rounded hover:bg-dark-700 text-dark-300 transition-colors"
+                    className="p-1.5 rounded hover:bg-white dark:bg-dark-900700 text-dark-300 transition-colors"
                   >
                     <Plus className="w-3 h-3" />
                   </button>
                 </div>
 
                 {/* Line Total */}
-                <p className="text-white font-semibold w-24 text-right">
+                <p className="text-gray-900 dark:text-white font-semibold w-24 text-right">
                   {formatPrice(item.price * item.quantity, item.currency)}
                 </p>
 
@@ -103,9 +103,9 @@ export default function CartPage() {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="glass-card p-6 sticky top-24 space-y-4">
-              <h2 className="text-xl font-bold text-white">Order Summary</h2>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Order Summary</h2>
               
-              <div className="space-y-2 pb-4 border-b border-dark-700/50">
+              <div className="space-y-2 pb-4 border-b border-gray-300 dark:border-dark-700700/50">
                 <div className="flex justify-between text-dark-300">
                   <span>Subtotal ({items.length} items)</span>
                   <span>{formatPrice(totalPrice(), items[0]?.currency || 'USD')}</span>
@@ -116,7 +116,7 @@ export default function CartPage() {
                 </div>
               </div>
 
-              <div className="flex justify-between text-lg font-bold text-white">
+              <div className="flex justify-between text-lg font-bold text-gray-900 dark:text-white">
                 <span>Total</span>
                 <span>{formatPrice(totalPrice(), items[0]?.currency || 'USD')}</span>
               </div>

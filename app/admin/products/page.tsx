@@ -48,7 +48,7 @@ export default function AdminProductsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-white">Products</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Products</h1>
         <Link href="/admin/products/new" className="btn-primary flex items-center gap-2">
           <Plus className="w-4 h-4" />
           Add Product
@@ -72,7 +72,7 @@ export default function AdminProductsPage() {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-dark-700/50 bg-dark-800/30">
+              <tr className="border-b border-gray-300 dark:border-dark-700700/50 bg-white dark:bg-dark-900800/30">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Product</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Category</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Price</th>
@@ -85,21 +85,21 @@ export default function AdminProductsPage() {
               {filtered.map(product => {
                 const stock = getStockStatus(product.stock_quantity, product.low_stock_threshold);
                 return (
-                  <tr key={product.id} className="border-b border-dark-800/30 hover:bg-dark-800/20">
+                  <tr key={product.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg overflow-hidden bg-dark-800 flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg overflow-hidden bg-white dark:bg-dark-900800 flex-shrink-0">
                           {product.images[0] ? (
                             <Image src={product.images[0]} alt="" width={40} height={40} className="w-full h-full object-cover" />
                           ) : (
-                            <div className="w-full h-full bg-dark-700" />
+                            <div className="w-full h-full bg-white dark:bg-dark-900700" />
                           )}
                         </div>
                         <span className="text-dark-200 font-medium text-sm truncate max-w-[200px]">{product.name}</span>
                       </div>
                     </td>
                     <td className="py-3 px-4 text-dark-400 text-sm">{product.category?.name || '-'}</td>
-                    <td className="py-3 px-4 text-white text-sm font-medium">{formatPrice(product.price, product.currency)}</td>
+                    <td className="py-3 px-4 text-gray-900 dark:text-white text-sm font-medium">{formatPrice(product.price, product.currency)}</td>
                     <td className="py-3 px-4 text-dark-300 text-sm">{product.stock_quantity}</td>
                     <td className="py-3 px-4">
                       <span className={`px-2 py-1 rounded-md text-xs font-medium ${

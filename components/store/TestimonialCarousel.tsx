@@ -53,10 +53,10 @@ export default function TestimonialCarousel() {
   const next = () => setCurrent(c => (c + 1) % testimonials.length);
 
   return (
-    <section className="page-section bg-dark-950/50">
+    <section className="page-section bg-white dark:bg-dark-900950/50">
       <div className="section-container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
           <p className="text-dark-400 max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ export default function TestimonialCarousel() {
               </p>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-white font-semibold">{testimonials[current].name}</p>
+                  <p className="text-gray-900 dark:text-white font-semibold">{testimonials[current].name}</p>
                   <p className="text-dark-400 text-sm">{testimonials[current].role} &bull; {testimonials[current].location}</p>
                 </div>
                 <div className="flex gap-1">
@@ -101,7 +101,7 @@ export default function TestimonialCarousel() {
 
           {/* Controls */}
           <div className="flex items-center justify-center gap-4 mt-6">
-            <button onClick={prev} className="p-2 rounded-full bg-dark-800 text-dark-400 hover:text-primary-400 hover:bg-dark-700 transition-all">
+            <button onClick={prev} className="p-2 rounded-full bg-white dark:bg-dark-900800 text-dark-400 hover:text-primary-400 hover:bg-white dark:bg-dark-900700 transition-all">
               <ChevronLeft className="w-5 h-5" />
             </button>
             <div className="flex gap-2">
@@ -110,12 +110,12 @@ export default function TestimonialCarousel() {
                   key={idx}
                   onClick={() => setCurrent(idx)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    idx === current ? 'w-6 bg-primary-500' : 'bg-dark-600'
+                    idx === current ? 'w-6 bg-primary-500' : 'bg-white dark:bg-dark-900600'
                   }`}
                 />
               ))}
             </div>
-            <button onClick={next} className="p-2 rounded-full bg-dark-800 text-dark-400 hover:text-primary-400 hover:bg-dark-700 transition-all">
+            <button onClick={next} className="p-2 rounded-full bg-white dark:bg-dark-900800 text-dark-400 hover:text-primary-400 hover:bg-white dark:bg-dark-900700 transition-all">
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>

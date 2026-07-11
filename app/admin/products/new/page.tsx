@@ -110,12 +110,12 @@ export default function NewProductPage() {
 
   return (
     <div className="max-w-4xl">
-      <h1 className="text-2xl font-bold text-white mb-6">Add New Product</h1>
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Add New Product</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Basic Info */}
         <div className="glass-card p-6 space-y-4">
-          <h2 className="text-lg font-semibold text-white">Basic Information</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Basic Information</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -148,7 +148,7 @@ export default function NewProductPage() {
 
         {/* Pricing */}
         <div className="glass-card p-6 space-y-4">
-          <h2 className="text-lg font-semibold text-white">Pricing & Stock</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Pricing & Stock</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
@@ -183,11 +183,11 @@ export default function NewProductPage() {
 
           <div className="flex gap-6">
             <label className="flex items-center gap-2 text-dark-300 cursor-pointer">
-              <input {...register('is_active')} type="checkbox" className="w-4 h-4 rounded border-dark-600 text-primary-500 focus:ring-primary-500" />
+              <input {...register('is_active')} type="checkbox" className="w-4 h-4 rounded border-gray-300 dark:border-dark-700600 text-primary-500 focus:ring-primary-500" />
               Active (visible in store)
             </label>
             <label className="flex items-center gap-2 text-dark-300 cursor-pointer">
-              <input {...register('featured')} type="checkbox" className="w-4 h-4 rounded border-dark-600 text-primary-500 focus:ring-primary-500" />
+              <input {...register('featured')} type="checkbox" className="w-4 h-4 rounded border-gray-300 dark:border-dark-700600 text-primary-500 focus:ring-primary-500" />
               Featured product
             </label>
           </div>
@@ -195,22 +195,22 @@ export default function NewProductPage() {
 
         {/* Images */}
         <div className="glass-card p-6 space-y-4">
-          <h2 className="text-lg font-semibold text-white">Images</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Images</h2>
           
           <div className="flex flex-wrap gap-3">
             {images.map((url, idx) => (
-              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-dark-700">
+              <div key={idx} className="relative w-24 h-24 rounded-lg overflow-hidden border border-gray-300 dark:border-dark-700700">
                 <img src={url} alt="" className="w-full h-full object-cover" />
                 <button
                   type="button"
                   onClick={() => setImages(images.filter((_, i) => i !== idx))}
-                  className="absolute top-1 right-1 p-1 rounded-full bg-red-500 text-white"
+                  className="absolute top-1 right-1 p-1 rounded-full bg-red-500 text-gray-900 dark:text-white"
                 >
                   <X className="w-3 h-3" />
                 </button>
               </div>
             ))}
-            <label className="w-24 h-24 rounded-lg border-2 border-dashed border-dark-600 flex flex-col items-center justify-center cursor-pointer hover:border-primary-500/50 transition-colors">
+            <label className="w-24 h-24 rounded-lg border-2 border-dashed border-gray-300 dark:border-dark-700600 flex flex-col items-center justify-center cursor-pointer hover:border-primary-500/50 transition-colors">
               {uploading ? (
                 <Loader2 className="w-5 h-5 text-dark-400 animate-spin" />
               ) : (
@@ -227,7 +227,7 @@ export default function NewProductPage() {
         {/* Specifications */}
         <div className="glass-card p-6 space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-white">Specifications</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Specifications</h2>
             <button
               type="button"
               onClick={() => setSpecs([...specs, { key: '', value: '' }])}

@@ -57,7 +57,7 @@ export default function AdminDashboard() {
       {/* Welcome Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             Welcome back, <span className="gradient-text">{userName}</span>
           </h1>
           <p className="text-dark-400 mt-1">Here&apos;s what&apos;s happening with your store.</p>
@@ -101,11 +101,11 @@ export default function AdminDashboard() {
 
       {/* Recent Orders */}
       <div className="glass-card p-6">
-        <h2 className="text-lg font-semibold text-white mb-4">Recent Orders</h2>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Orders</h2>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-dark-700/50">
+              <tr className="border-b border-gray-300 dark:border-dark-700700/50">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Order</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Customer</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Date</th>
@@ -115,11 +115,11 @@ export default function AdminDashboard() {
             </thead>
             <tbody>
               {analytics?.recentOrders?.map(order => (
-                <tr key={order.id} className="border-b border-dark-800/30 hover:bg-dark-800/20">
+                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-primary-400 font-mono text-sm">{order.order_number}</td>
                   <td className="py-3 px-4 text-dark-200 text-sm">{order.customer_name}</td>
                   <td className="py-3 px-4 text-dark-400 text-sm">{formatDate(order.created_at)}</td>
-                  <td className="py-3 px-4 text-white font-medium text-sm">{formatPrice(order.total, order.currency)}</td>
+                  <td className="py-3 px-4 text-gray-900 dark:text-white font-medium text-sm">{formatPrice(order.total, order.currency)}</td>
                   <td className="py-3 px-4">
                     <StatusBadge status={order.status} />
                   </td>
@@ -152,7 +152,7 @@ function StatCard({ icon, label, value, color }: { icon: React.ReactNode; label:
         {icon}
       </div>
       <p className="text-dark-400 text-sm">{label}</p>
-      <p className="text-2xl font-bold text-white mt-1">{value}</p>
+      <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{value}</p>
     </div>
   );
 }

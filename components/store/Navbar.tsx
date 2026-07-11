@@ -107,7 +107,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-dark-950/90 backdrop-blur-xl border-b border-dark-800/50 shadow-lg'
+          ? 'bg-white dark:bg-dark-900950/90 backdrop-blur-xl border-b border-gray-300 dark:border-dark-700800/50 shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -116,7 +116,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Logo size="sm" />
-            <span className="font-display text-xl font-bold text-white group-hover:text-primary-400 transition-colors">
+            <span className="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-400 transition-colors">
               SogAfrika
             </span>
           </Link>
@@ -152,7 +152,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-dark-900/95 backdrop-blur-xl border border-dark-700/50 shadow-xl py-2"
+                    className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-white dark:bg-dark-900900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700700/50 shadow-xl py-2"
                   >
                     {PRODUCT_CATEGORIES.map(category => (
                       <Link
@@ -196,7 +196,7 @@ export default function Navbar() {
             >
               <Heart className="w-5 h-5" />
               {wishlistCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary-500 text-gray-900 dark:text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -208,7 +208,7 @@ export default function Navbar() {
             >
               <ShoppingCart className="w-5 h-5" />
               {cartCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary-500 text-gray-900 dark:text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -230,9 +230,9 @@ export default function Navbar() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full right-0 mt-1 w-48 rounded-xl bg-dark-900/95 backdrop-blur-xl border border-dark-700/50 shadow-xl py-2"
+                      className="absolute top-full right-0 mt-1 w-48 rounded-xl bg-white dark:bg-dark-900900/95 backdrop-blur-xl border border-gray-300 dark:border-dark-700700/50 shadow-xl py-2"
                     >
-                      <p className="px-4 py-2 text-xs text-dark-500 truncate border-b border-dark-800/50">
+                      <p className="px-4 py-2 text-xs text-dark-500 truncate border-b border-gray-300 dark:border-dark-700800/50">
                         {user.email}
                       </p>
                       {user.role !== 'admin' && (
@@ -282,7 +282,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-dark-800/50 overflow-hidden"
+              className="md:hidden border-t border-gray-300 dark:border-dark-700800/50 overflow-hidden"
             >
               <div className="py-4 space-y-1">
                 {navLinks.map(link => (
@@ -301,7 +301,7 @@ export default function Navbar() {
                 ))}
 
                 {/* Mobile Categories */}
-                <div className="pt-2 border-t border-dark-800/50">
+                <div className="pt-2 border-t border-gray-300 dark:border-dark-700800/50">
                   <p className="px-4 py-2 text-xs text-dark-500 uppercase tracking-wider">Categories</p>
                   {PRODUCT_CATEGORIES.map(category => (
                     <Link
@@ -316,7 +316,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Auth */}
-                <div className="pt-2 border-t border-dark-800/50">
+                <div className="pt-2 border-t border-gray-300 dark:border-dark-700800/50">
                   {user ? (
                     <>
                       {/* Admin Dashboard link — mobile */}

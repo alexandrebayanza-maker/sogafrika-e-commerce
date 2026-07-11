@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-dark-950">
+      <div className="absolute inset-0 bg-white dark:bg-dark-900950">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-950/50 to-dark-950" />
         {/* Animated glow orbs */}
@@ -32,7 +32,7 @@ export default function HeroSection() {
               <span className="text-primary-400 text-sm font-medium">Advanced Security Solutions</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
               Protecting{' '}
               <span className="gradient-text">What Matters</span>{' '}
               Most
@@ -55,17 +55,17 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-dark-800/50">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 dark:border-dark-700800/50">
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-white">{DISPLAY_STATS.products.value}</p>
+                <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.products.value}</p>
                 <p className="text-dark-400 text-sm">{DISPLAY_STATS.products.label}</p>
               </div>
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-white">{DISPLAY_STATS.clients.value}</p>
+                <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.clients.value}</p>
                 <p className="text-dark-400 text-sm">{DISPLAY_STATS.clients.label}</p>
               </div>
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-white">{DISPLAY_STATS.experience.value}</p>
+                <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">{DISPLAY_STATS.experience.value}</p>
                 <p className="text-dark-400 text-sm">{DISPLAY_STATS.experience.label}</p>
               </div>
             </div>
@@ -86,13 +86,13 @@ export default function HeroSection() {
                 </div>
               </div>
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-xl bg-dark-800/80 backdrop-blur border border-primary-500/20 flex items-center justify-center animate-float">
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-xl bg-white dark:bg-dark-900800/80 backdrop-blur border border-primary-500/20 flex items-center justify-center animate-float">
                 <span className="text-2xl">📹</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-dark-800/80 backdrop-blur border border-secondary-500/20 flex items-center justify-center animate-float delay-1000">
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-white dark:bg-dark-900800/80 backdrop-blur border border-secondary-500/20 flex items-center justify-center animate-float delay-1000">
                 <span className="text-2xl">🔒</span>
               </div>
-              <div className="absolute top-1/2 -right-8 w-16 h-16 rounded-xl bg-dark-800/80 backdrop-blur border border-primary-500/20 flex items-center justify-center animate-float delay-500">
+              <div className="absolute top-1/2 -right-8 w-16 h-16 rounded-xl bg-white dark:bg-dark-900800/80 backdrop-blur border border-primary-500/20 flex items-center justify-center animate-float delay-500">
                 <span className="text-2xl">🌐</span>
               </div>
             </div>

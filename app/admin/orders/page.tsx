@@ -49,7 +49,7 @@ export default function AdminOrdersPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-white">Orders</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Orders</h1>
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
@@ -66,7 +66,7 @@ export default function AdminOrdersPage() {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-dark-700/50 bg-dark-800/30">
+              <tr className="border-b border-gray-300 dark:border-dark-700700/50 bg-white dark:bg-dark-900800/30">
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Order</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Customer</th>
                 <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Date</th>
@@ -77,7 +77,7 @@ export default function AdminOrdersPage() {
             </thead>
             <tbody>
               {orders.map(order => (
-                <tr key={order.id} className="border-b border-dark-800/30 hover:bg-dark-800/20">
+                <tr key={order.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
                   <td className="py-3 px-4 text-primary-400 font-mono text-sm">{order.order_number}</td>
                   <td className="py-3 px-4">
                     <div>
@@ -86,12 +86,12 @@ export default function AdminOrdersPage() {
                     </div>
                   </td>
                   <td className="py-3 px-4 text-dark-400 text-sm">{formatDateTime(order.created_at)}</td>
-                  <td className="py-3 px-4 text-white font-medium text-sm">{formatPrice(order.total, order.currency)}</td>
+                  <td className="py-3 px-4 text-gray-900 dark:text-white font-medium text-sm">{formatPrice(order.total, order.currency)}</td>
                   <td className="py-3 px-4">
                     <select
                       value={order.status}
                       onChange={(e) => updateStatus(order.id, e.target.value)}
-                      className="bg-dark-800 border border-dark-700 rounded px-2 py-1 text-xs text-dark-200"
+                      className="bg-white dark:bg-dark-900800 border border-gray-300 dark:border-dark-700700 rounded px-2 py-1 text-xs text-dark-200"
                     >
                       {ORDER_STATUSES.map(s => (
                         <option key={s.value} value={s.value}>{s.label}</option>
@@ -120,11 +120,11 @@ export default function AdminOrdersPage() {
 
       {/* Order Detail Modal */}
       {selectedOrder && (
-        <div className="fixed inset-0 bg-dark-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setSelectedOrder(null)}>
+        <div className="fixed inset-0 bg-white dark:bg-dark-900950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setSelectedOrder(null)}>
           <div className="glass-card max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 space-y-4" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-white">Order {selectedOrder.order_number}</h2>
-              <button onClick={() => setSelectedOrder(null)} className="text-dark-400 hover:text-white">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Order {selectedOrder.order_number}</h2>
+              <button onClick={() => setSelectedOrder(null)} className="text-dark-400 hover:text-gray-900 dark:text-white">
                 &times;
               </button>
             </div>
@@ -152,19 +152,19 @@ export default function AdminOrdersPage() {
                   <p className="text-dark-500 text-xs mb-2">Items</p>
                   <div className="space-y-2">
                     {selectedOrder.items.map(item => (
-                      <div key={item.id} className="flex justify-between items-center py-2 border-b border-dark-800/50">
+                      <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-300 dark:border-dark-700800/50">
                         <div>
                           <p className="text-dark-200 text-sm">{item.product_name}</p>
                           <p className="text-dark-500 text-xs">Qty: {item.quantity}</p>
                         </div>
-                        <p className="text-white text-sm font-medium">{formatPrice(item.total_price, selectedOrder.currency)}</p>
+                        <p className="text-gray-900 dark:text-white text-sm font-medium">{formatPrice(item.total_price, selectedOrder.currency)}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
-              <div className="pt-3 border-t border-dark-700/50 flex justify-between">
-                <span className="text-white font-semibold">Total</span>
+              <div className="pt-3 border-t border-gray-300 dark:border-dark-700700/50 flex justify-between">
+                <span className="text-gray-900 dark:text-white font-semibold">Total</span>
                 <span className="text-primary-400 font-bold text-lg">{formatPrice(selectedOrder.total, selectedOrder.currency)}</span>
               </div>
             </div>

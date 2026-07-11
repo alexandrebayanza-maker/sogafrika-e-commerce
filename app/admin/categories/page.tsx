@@ -56,7 +56,7 @@ export default function AdminCategoriesPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-white">Categories</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Categories</h1>
         <button onClick={() => setShowForm(!showForm)} className="btn-primary flex items-center gap-2">
           <Plus className="w-4 h-4" />
           Add Category
@@ -107,7 +107,7 @@ export default function AdminCategoriesPage() {
       <div className="glass-card overflow-hidden">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-dark-700/50 bg-dark-800/30">
+            <tr className="border-b border-gray-300 dark:border-dark-700700/50 bg-white dark:bg-dark-900800/30">
               <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Name</th>
               <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Slug</th>
               <th className="text-left py-3 px-4 text-dark-400 text-sm font-medium">Description</th>
@@ -115,8 +115,8 @@ export default function AdminCategoriesPage() {
           </thead>
           <tbody>
             {categories.map(cat => (
-              <tr key={cat.id} className="border-b border-dark-800/30 hover:bg-dark-800/20">
-                <td className="py-3 px-4 text-white font-medium">{cat.name}</td>
+              <tr key={cat.id} className="border-b border-gray-300 dark:border-dark-700800/30 hover:bg-white dark:bg-dark-900800/20">
+                <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">{cat.name}</td>
                 <td className="py-3 px-4 text-dark-400 font-mono text-sm">{cat.slug}</td>
                 <td className="py-3 px-4 text-dark-400 text-sm">{cat.description || '-'}</td>
               </tr>
